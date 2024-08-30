@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تم الشراء</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #bcb6b6;
+            margin: 0;
+        }
+
+        .checkmark-circle {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #4CAF50;
+            position: relative;
+            animation: border-expand 0.3s ease-in-out forwards;
+        }
+
+        .checkmark {
+            width: 90px;
+            height: 130px;
+            border-right: 6px solid #4CAF50;
+            border-radius: 60px 0px 0px 60px;
+            transform: rotate(135deg);
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            animation: draw 0.5s ease-in-out 0.8s forwards;
+        }
+
+        @keyframes draw {
+            0% {
+                height: 0;
+                width: 0;
+                opacity: 1;
+            }
+
+            100% {
+                height: 130px;
+                width: 90px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes border-expand {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 1;
+            }
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .links a:hover {
+            color: #2E8B57;
+        }
+
+        .thank-you {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkmark-circle">
+        <div class="checkmark"></div>
+    </div>
+
+    <div class="links">
+        <a href="SA.html"> الرئيسية</a>
+        <span> - </span>
+        <a href="flow2.html">تتبع الشحنة</a>
+    </div>
+    <div class="thank-you">
+تم الشراء بنجاح , شكرا لك على الشراء    </div>
+</body>
+
+</html>

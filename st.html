@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحة الشكاوى</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background-color: rgb(126, 160, 176);
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        textarea {
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+            color: #333;
+        }
+        input[type="submit"] {
+            padding: 8px 16px;
+            background-color: #ff3366;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #cc0044;
+        }
+        .logout {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            color: red;
+        }
+    
+    
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+      
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: blue; 
+     font-weight: bold; 
+
+    }
+    
+    
+
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      padding: 5px;
+      border: 1px solid #070707;
+      border-radius: 5px;
+      text-align: center;
+     font-weight: bold; 
+    }
+
+    .product img {
+      width: 60%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      max-height: 50px;
+    }
+    
+    .product .price {
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #fc0404;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #e6dfdf;
+      color: rgb(8, 8, 8) 4, 252;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: bold;
+
+    }
+
+    footer {
+      background-color: #ffffff;
+      color: #080808;
+      text-align: center;
+      padding: 10px; 
+      
+    }
+
+    .contact-info p {
+      font-size: 14px; 
+      margin: 5px 0; 
+      font-weight: bold; 
+
+    }
+
+    .footer-small-text {
+      font-size: 15px; 
+      font-weight: bold; 
+
+    }
+
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(80, 134, 134);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      
+    }
+
+    .dropdown-content a {
+      color: #fc0404;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: red;
+      color: #070707;
+
+    }
+    .product img {
+  max-width: 100%;
+  height: auto; 
+  border-radius: 15px;
+  margin-bottom: 15px;
+  max-height: 300px; 
+}
+.product img {
+      transition: transform 0.3s ease; 
+    }
+
+    .product img:hover {
+      transform: scale(0.9); 
+    }
+.payment-methods {
+  margin-top: 20px;
+}
+
+.payment-methods img {
+  width: 50px; 
+  margin-right: 10px; 
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.social-links li {
+  margin: 0 5px;
+}
+.red-button {
+  background-color: #FF0000; 
+  color: #ffffff; 
+  border: none;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.red-button:hover {
+  background-color: #CC0000; 
+}
+.back-to-home {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: red; 
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .back-to-home:hover {
+      background-color: darkred;
+    }
+    </style>      
+</head>
+<button class="back-to-home" onclick="window.location.href='SA.html'">الرجوع للرئيسية</button>
+<body>
+
+    <h1>نستقبل شكاويكم هنا سيتم الرد عليها باسرع وقت </h1>
+        <textarea id="complaint" name="complaint" rows="6"></textarea>
+        <a href="done.html">
+          <button class="red-button"> ارسال الشكوى</button>
+        </a>
+        <a href="donest.html">
+        <button class="red-button"> رؤية الردود على شكاويك من قبل دعم فريقنا </button>
+      </a>
+    </form>
+  
+  
+</body>
+</html>

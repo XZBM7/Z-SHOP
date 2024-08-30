@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سلة التسوق</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/2838/2838895.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .products {
+      display: grid;
+      gap: 20px;
+    }
+
+    .product {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .remove-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    order: 1;
+    margin-left: 30px; /* Adjusted margin to move the button to the right */
+  }
+
+  .remove-btn i {
+    color: #e74c3c;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+
+    .remove-btn:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .remove-btn .tooltip {
+      visibility: hidden;
+      width: 120px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      font-size: 16px;
+      flex-grow: 1;
+    }
+
+    .product img {
+      width: 120px;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-left: 20px;
+      order: -1;
+    }
+
+    .product-details p {
+      margin: 5px 0;
+    }
+
+    .order-details {
+      margin-top: 30px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .order-details h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .order-details p {
+      margin: 15px 0;
+      font-size: 16px;
+      text-align: right;
+    }
+
+    .complete-purchase-btn {
+      display: block;
+      margin: 0 auto;
+      padding: 8px 16px;
+      background-color: #f6e3e3;
+      color: black;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .page-title {
+      text-align: center;
+    }
+
+    .shopping-cart-icon {
+      font-size: 24px;
+      color: #333;
+    }
+    .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-btn, .purchase-btn {
+            padding: 10px 20px;
+            background-color: #c43737;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .back-btn:hover, .purchase-btn:hover {
+            background-color: #cc0000;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page-title">
+      <i class="fas fa-shopping-cart shopping-cart-icon"></i>
+      <h1>سلة التسوق</h1>
+    </div>
+    <div class="Products">
+    <div class="product">
+      <div class="product-details">
+        <p><strong>اسم المنتج:</strong> تيشرت النادي الأهلي</p>
+        <p><strong>رقم المنتج:</strong> 789012</p>
+        <p><strong>سعر المنتج:</strong> ١١٩۰ جنيها مصريا</p>
+        <p><strong>الكمية:</strong> 1</p>
+        <p><strong>إجمالي السعر:</strong> ١١٩۰ جنيها مصريا</p>
+      </div>
+      <img src="https://assets.adidas.com/images/w_940,f_auto,q_auto/13e23e0027d74dea9f16592cb19038fa_9366/IU7911_41_detail.jpg" alt="منتج">
+      <button class="remove-btn">
+        <i class="fas fa-trash"></i>
+        <span class="tooltip">إزالة من السلة</span>
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <p><strong>اسم المنتج:</strong> بنطلون جينز للأولاد</p>
+        <p><strong>رقم المنتج:</strong> 123456</p>
+        <p><strong>سعر المنتج:</strong> ٥٠٠ جنيها مصريا</p>
+        <p><strong>الكمية:</strong> 1</p>
+        <p><strong>إجمالي السعر:</strong> ٥٠٠ جنيها مصريا</p>
+      </div>
+      <img src="https://m.media-amazon.com/images/I/61b3f3ip2nL._AC_SX679_.jpg" alt="بنطلون">
+      <button class="remove-btn">
+        <i class="fas fa-trash"></i>
+        <span class="tooltip">إزالة من السلة</span>
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <p><strong>اسم المنتج:</strong> حذاء بوط كلاسيكي للرجال مصنوع من الجلد من رومبا</p>
+        <p><strong>رقم المنتج:</strong> 34526</p>
+        <p><strong>سعر المنتج:</strong> ٨٠٠ جنيها مصريا</p>
+        <p><strong>الكمية:</strong> 1</p>
+        <p><strong>إجمالي السعر:</strong> ٨٠٠ جنيها مصريا</p>
+        <p><strong>إجمالي السعر:</strong> ٨٠٠ جنيها مصريا</p>
+
+      </div>
+      <img src="https://m.media-amazon.com/images/I/817dI35-ioL._AC_SX679_.jpg" alt="منتج">
+      <button class="remove-btn">
+        <i class="fas fa-trash"></i>
+        <span class="tooltip">إزالة من السلة</span>
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <p><strong>اسم المنتج:</strong> حذاء كرة قدم ثابت Nemeziz.1 من اديداس لون ازرق واسود واصفر 38 2/3, متعدد، حذاء رياضي برقبة عالية</p>
+        <p><strong>رقم المنتج:</strong> 56473</p>
+        <p><strong>سعر المنتج:</strong> ٥٠٠٠ جنيها مصريا</p>
+        <p><strong>الكمية:</strong> 1</p>
+        <p><strong>إجمالي السعر:</strong> ٥٠٠٠ جنيها مصريا</p>
+      </div>
+      <img src="https://m.media-amazon.com/images/I/81gGWOoGeoL._AC_SX695_.jpg" alt="منتج">
+      <button class="remove-btn">
+        <i class="fas fa-trash"></i>
+        <span class="tooltip">إزالة من السلة</span>
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <p><strong>اسم المنتج:</strong> فستان بناتي موديل مميزاحمر</p>
+        <p><strong>رقم المنتج:</strong> 45463</p>
+        <p><strong>سعر المنتج:</strong> ٣٩٩ جنيها مصريا</p>
+        <p><strong>الكمية:</strong> 1</p>
+        <p><strong>إجمالي السعر:</strong> ٣٩٩ جنيها مصريا</p>
+      </div>
+      <img src="https://m.media-amazon.com/images/I/61mPDngSphL._AC_SX679_.jpg" alt="منتج">
+      <button class="remove-btn">
+        <i class="fas fa-trash"></i>
+        <span class="tooltip">إزالة من السلة</span>
+      </button>
+    </div>
+  </div>
+    <div class="order-details">
+      <h2>تفاصيل الطلب</h2>
+      <p><strong>اسم العميل:</strong> محمد أحمد قرطام</p>
+      <p><strong>عنوان الشحن:</strong> ٢٠ شارع الحجاز - المهندسين</p>
+      <p><strong>معلومات الاتصال:</strong> 01145578463</p>
+      <p><strong>السعر الإجمالي:</strong> ٧,٨٨٩ جنيها مصريا</p>
+      <p><strong>الوقت المتوقع للوصول :</strong>الاثنين 23 اكتوبر</p>
+
+      <a href="pay.html">
+      <div class="button-container">
+        <button class="back-btn">اتمام الشراء </button>
+    </div>
+</a>
+<a href="SA.html">
+     <div class="button-container">
+        <button class="purchase-btn">الرجوع للرئيسية </button>
+    </div>
+</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

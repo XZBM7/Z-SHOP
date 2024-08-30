@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تتبع الشحنة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c7c0c0;
+            margin: 0;
+        }
+
+        .tracking-container {
+            max-width: 500px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .tracking-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .tracking-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .track-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .track-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .shipment-details {
+            text-align: left;
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .shipment-details h3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tracking-container">
+        <h2>تتبع الشحنة</h2>
+        <input type="text" class="tracking-input" placeholder="أدخل رقم الشحنة">
+        <button class="track-btn" onclick="showDetails()">تتبع</button>
+        <a href="SA.html">
+        <button class="track-btn" onclick="showDetails()">العودة للرئيسية</button>
+</a>
+        
+        <div class="shipment-details" id="shipmentDetails">
+            <h3>تفاصيل الشحنة</h3>
+            <p><strong>اسم المندوب: </strong>عمر السيد علي </p>
+            <p><strong>الوقت المتوقع: </strong> الاثنين 23 اكتوبر -الاربعاء 25 اكتوبر  </p>
+            <p><strong> تتبع طلبك: </strong>طلبكم قيد التجهيز والتغليف من قبل فريقنا  </p>
+            <p><strong>  حاله طلبك: </strong>قيد الانتظار</p>
+
+        </div>
+    </div>
+
+    <script>
+        function showDetails() {
+            var details = document.getElementById('shipmentDetails');
+            details.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

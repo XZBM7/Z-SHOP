@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشترياتي</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/2662/2662503.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .purchases {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .purchase {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .purchase-details {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      font-size: 16px;
+      flex-grow: 1;
+    }
+
+    .purchase img {
+      width: 120px;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-left: 20px;
+      order: -1;
+    }
+
+    .purchase-details p {
+      margin: 5px 0;
+    }
+
+    .star-rating {
+      font-size: 24px;
+	  color: #f39c12;
+    }
+
+    .empty-star {
+      content: '☆';
+      color: #ccc;
+    }
+
+    .page-title {
+      text-align: center;
+    }
+
+    .cart-icon {
+      font-size: 24px;
+      color: #333;
+    }
+    .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-btn, .purchase-btn {
+            padding: 10px 20px;
+            background-color: #c43737;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .back-btn:hover, .purchase-btn:hover {
+            background-color: #cc0000;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page-title">
+      <i class="fas fa-shopping-bag cart-icon"></i>
+      <h1>مشترياتي السابقة</h1>
+    </div>
+
+    <div class="purchases">
+    
+      <div class="purchase">
+        <div class="purchase-details">
+          <p><strong>اسم المنتج:</strong> iPhone 14 Pro</p>
+          <p><strong>سعر المنتج:</strong> 56000 EGP</p>
+          <p><strong>التقييم:</strong> <span class="star-rating">★★★★★</span></p>
+        </div>
+        <img src="https://tech-echo.com/wp-content/uploads/2022/09/iphone-14-Pro-design.jpg" alt="منتج">
+      </div>
+
+      <div class="purchase">
+        <div class="purchase-details">
+          <p><strong>اسم المنتج:</strong> حذاء اديداس رجالي </p>
+          <p><strong>سعر المنتج:</strong> 1500 EGP</p>
+          <p><strong>التقييم:</strong> 
+            <span class="star-rating">★★★★☆</span>
+          </p>
+        </div>
+        <img src="https://m.media-amazon.com/images/I/71aIlmeVdrL._AC_SX695_.jpg" alt="منتج">
+      </div>
+
+      <div class="purchase">
+        <div class="purchase-details">
+          <p><strong>اسم المنتج:</strong>  وايد ليج </p>
+          <p><strong>سعر المنتج:</strong> 450 EGP</p>
+          <p><strong>التقييم:</strong> 
+            <span class="star-rating">★★★★☆</span>
+          </p>
+        </div>
+        <img src="https://m.media-amazon.com/images/I/81GEMv8Bp4L._AC_SY741_.jpg" alt="منتج">
+      </div>
+
+      <div class="purchase">
+        <div class="purchase-details">
+          <p><strong>اسم المنتج:</strong> عطر لينك للرجال 200 مل</p>
+          <p><strong>سعر المنتج:</strong> 4500 EGP</p>
+          <p><strong>التقييم:</strong> 
+            <span class="star-rating">★★★☆☆</span>
+          </p>
+        </div>
+        <img src="https://m.media-amazon.com/images/I/51ce9cuqBuL.jpg" alt="منتج">
+      </div>
+
+      <div class="purchase">
+        <div class="purchase-details">
+          <p><strong>اسم المنتج:</strong> HUAWEI MateView GT 34-inch Sound Edition</p>
+          <p><strong>سعر المنتج:</strong> 66000 EGP</p>
+          <p><strong>التقييم:</strong> <span class="star-rating">★★★★★</span></p>
+        </div>
+        <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/monitors/mateview-gt/list.png" alt="منتج">
+      </div>
+
+      <div class="purchase">
+        <div class="purchase-details">
+          <p><strong>اسم المنتج:</strong> هودي اسود</p>
+          <p><strong>سعر المنتج:</strong> 380 EGP</p>
+          <p><strong>التقييم:</strong> 
+            <span class="star-rating">★★☆☆☆</span>
+          </p>
+        </div>
+        <img src="https://m.media-amazon.com/images/I/61IrEgdqMZL._AC_SY879_.jpg" alt="منتج">
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <a href="SA.html">
+    <div class="button-container">
+       <button class="purchase-btn">الرجوع للرئيسية </button>
+   </div>
+</a>
+</html>
